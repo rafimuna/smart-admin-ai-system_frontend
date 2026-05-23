@@ -1,36 +1,43 @@
 <template>
   <q-layout view="hHh Lpr lFf">
     <!-- ================= HEADER ================= -->
-    <q-header elevated class="bg-white text-dark shadow-3">
-      <q-toolbar>
-        <!-- Sidebar toggle -->
+    <q-header elevated class="bg-white text-dark shadow-2">
+      <q-toolbar class="q-px-md">
+        <!-- MENU -->
         <q-btn flat dense round icon="menu" @click="toggleDrawer" />
 
-        <q-toolbar-title class="text-weight-bold"> Ecommerce Admin </q-toolbar-title>
+        <!-- LOGO -->
+        <div class="row items-center q-ml-sm">
+          <!-- hide text on mobile -->
+          <div class="text-subtitle1 text-weight-bold q-ml-sm gt-xs">Ecommerce Admin</div>
+        </div>
 
         <q-space />
 
-        <!-- 🔍 SEARCH -->
-        <q-input dense outlined placeholder="Search..." style="width: 220px">
+        <!-- SEARCH -->
+        <q-input dense outlined rounded placeholder="Search..." class="search-input gt-sm">
           <template v-slot:prepend>
             <q-icon name="search" />
           </template>
         </q-input>
 
-        <!-- 🎤 VOICE AGENT -->
-        <VoiceAgent class="q-ml-sm" />
+        <!-- MOBILE SEARCH -->
+        <q-btn flat round icon="search" class="lt-md" />
 
-        <!-- 🌙 DARK MODE -->
+        <!-- VOICE -->
+        <VoiceAgent class="q-ml-sm gt-xs" />
+
+        <!-- DARK MODE -->
         <q-btn flat round icon="dark_mode" @click="toggleDarkMode" />
 
-        <!-- 🔔 NOTIFICATIONS -->
+        <!-- NOTIFICATIONS -->
         <q-btn flat round icon="notifications">
-          <q-badge color="red" floating>3</q-badge>
+          <q-badge color="red" floating> 3 </q-badge>
         </q-btn>
 
-        <!-- 👤 USER MENU -->
+        <!-- USER -->
         <q-btn flat round class="q-ml-sm">
-          <q-avatar size="32px">
+          <q-avatar size="34px">
             <img src="https://cdn.quasar.dev/img/avatar.png" />
           </q-avatar>
 
@@ -46,7 +53,6 @@
 
               <q-separator />
 
-              <!-- LOGOUT -->
               <q-item clickable @click="handleLogout">
                 <q-item-section class="text-negative"> Logout </q-item-section>
               </q-item>
@@ -144,3 +150,13 @@ onMounted(() => {
   }
 })
 </script>
+<style scoped>
+.search-input {
+  width: 220px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus-within {
+  width: 280px;
+}
+</style>
