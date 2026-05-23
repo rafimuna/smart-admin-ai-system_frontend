@@ -8,9 +8,7 @@
 
         <!-- LOGO / BRAND -->
         <div class="row items-center q-ml-sm">
-          <q-avatar size="34px">
-            <img src="/favicon.ico" />
-          </q-avatar>
+          <p>Admin dashboard</p>
 
           <!-- hide text on mobile -->
           <div class="text-subtitle1 text-weight-bold q-ml-sm gt-xs">Ecommerce Admin</div>
@@ -149,35 +147,35 @@ const menuLists = [
     title: 'Dashboard',
     caption: 'Analytics Overview',
     icon: 'dashboard',
-    link: '/dashboard',
+    link: '/admin/dashboard',
   },
 
   {
     title: 'Products',
     caption: 'Manage Products',
     icon: 'inventory_2',
-    link: '/dashboard/products',
+    link: '/admin/products',
   },
 
   {
     title: 'Orders',
     caption: 'Customer Orders',
     icon: 'shopping_cart',
-    link: '/dashboard/orders',
+    link: '/admin/orders',
   },
 
   {
     title: 'Users',
     caption: 'Manage Users',
     icon: 'group',
-    link: '/dashboard/users',
+    link: '/admin/users',
   },
 
   {
     title: 'Settings',
     caption: 'Application Settings',
     icon: 'settings',
-    link: '/dashboard/settings',
+    link: '/admin/settings',
   },
 ]
 
