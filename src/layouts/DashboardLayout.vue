@@ -109,11 +109,16 @@ const miniState = ref(false)
 
 /* ================= MENU ================= */
 const menuLists = [
-  { title: 'Dashboard', caption: 'Analytics Overview', icon: 'dashboard', link: '/dashboard' },
-  { title: 'Products', caption: 'Manage Products', icon: 'inventory', link: '/dashboard/products' },
-  { title: 'Users', caption: 'Manage Users', icon: 'group', link: '/dashboard/users' },
-  { title: 'Orders', caption: 'Customer Orders', icon: 'shopping_cart', link: '/dashboard/orders' },
-  { title: 'Settings', caption: 'App Settings', icon: 'settings', link: '/dashboard/settings' },
+  {
+    title: 'Dashboard',
+    caption: 'Analytics Overview',
+    icon: 'dashboard',
+    link: '/admin/dashboard',
+  },
+  { title: 'Products', caption: 'Manage Products', icon: 'inventory', link: '/admin/products' },
+  { title: 'Users', caption: 'Manage Users', icon: 'group', link: '/admin/users' },
+  { title: 'Orders', caption: 'Customer Orders', icon: 'shopping_cart', link: '/admin/orders' },
+  { title: 'Settings', caption: 'App Settings', icon: 'settings', link: '/admin/settings' },
 ]
 
 /* ================= FUNCTIONS ================= */
