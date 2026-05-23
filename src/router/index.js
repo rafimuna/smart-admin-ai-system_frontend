@@ -33,5 +33,10 @@ export default defineRouter((/* { store, ssrContext } */) => {
     history: createHistory(process.env.VUE_ROUTER_BASE),
   })
 
+  // 🚀 DYNAMIC TITLE SYSTEM
+  Router.afterEach((to) => {
+    document.title = to.meta?.title || 'Ecommerce Admin Dashboard'
+  })
+
   return Router
 })
